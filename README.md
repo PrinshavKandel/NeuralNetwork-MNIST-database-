@@ -1,10 +1,10 @@
-# 🔢 MNIST Digit Classifier — Neural Network from Scratch
+# MNIST Digit Classifier — Neural Network from Scratch
 
 A fully functional **2-layer neural network** built using only `NumPy` and `Pandas` that classifies handwritten digits (0–9) from the [MNIST dataset](https://www.kaggle.com/c/digit-recognizer). No deep learning frameworks — just math.
 
----
 
-## 📁 Project Structure
+
+ Project Structure
 
 ```
 mnist-classifier/
@@ -16,7 +16,7 @@ mnist-classifier/
 
 ---
 
-## 🧠 Network Architecture
+# Network Architecture
 
 ```
 Input Layer        Hidden Layer       Output Layer
@@ -48,7 +48,7 @@ Make sure `train.csv` is available at the correct path (default: `/kaggle/input/
 
 ---
 
-## 🔄 Data Preprocessing
+# Data Preprocessing
 
 The dataset is loaded, shuffled, and split into:
 - **Validation set**: first 1,000 samples
@@ -62,7 +62,7 @@ The data matrix $X$ has shape **(784, m)** where **m** is the number of samples,
 
 ---
 
-## 🏗️ Weight Initialization
+# Weight Initialization
 
 Weights and biases are initialized randomly in the range $[-0.5, 0.5]$:
 
@@ -79,7 +79,7 @@ b_output = np.random.rand(10, 1)  - 0.5
 
 ---
 
-## ➡️ Forward Propagation
+#Forward Propagation
 
 Forward propagation computes the network's prediction by passing the input through each layer.
 
@@ -114,7 +114,7 @@ Each column of $A_{\text{out}}$ is a probability distribution over the 10 digit 
 
 ---
 
-## ⬅️ Backward Propagation
+# Backward Propagation
 
 Backpropagation computes gradients of the loss with respect to every parameter using the **chain rule**, so we can update weights to reduce error.
 
@@ -174,7 +174,7 @@ Matrix shapes:
 
 ---
 
-## 📉 Gradient Descent (Parameter Update)
+# Gradient Descent (Parameter Update)
 
 All parameters are updated simultaneously using standard gradient descent with learning rate $\alpha$:
 
@@ -194,7 +194,7 @@ epochs        = 500
 
 ---
 
-## 📊 Accuracy
+# Accuracy
 
 Predictions are taken as the class with the highest probability:
 
@@ -206,7 +206,7 @@ $$\text{Accuracy} = \frac{1}{m} \sum_{i=1}^{m} \mathbf{1}\left[\hat{y}^{(i)} = y
 
 ---
 
-## 🖼️ Visualizing Predictions
+# Visualizing Predictions
 
 ```python
 visualize_prediction(0, W_hidden, b_hidden, W_output, b_output)
@@ -216,7 +216,7 @@ This displays the 28×28 image alongside the model's prediction and the true lab
 
 ---
 
-## 📈 Expected Results
+# Expected Results
 
 | Set | Accuracy |
 |-----|----------|
@@ -227,7 +227,7 @@ This displays the 28×28 image alongside the model's prediction and the true lab
 
 ---
 
-## 📌 Key Concepts Summary
+# Key Concepts Summary
 
 | Concept | Formula |
 |---------|---------|
@@ -241,7 +241,7 @@ This displays the 28×28 image alongside the model's prediction and the true lab
 
 ---
 
-## 📚 References
+# References
 
 - [3Blue1Brown — Neural Networks series](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi)
 - [Samson Zhang — Building a Neural Network from Scratch](https://www.youtube.com/watch?v=w8yWXqWQYmU)
@@ -249,6 +249,6 @@ This displays the 28×28 image alongside the model's prediction and the true lab
 
 ---
 
-## 📝 License
+# License
 
 MIT License — free to use, modify, and distribute.
