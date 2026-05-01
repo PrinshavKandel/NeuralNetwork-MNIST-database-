@@ -4,17 +4,7 @@ A fully functional **2-layer neural network** built using only `NumPy` and `Pand
 
 
 
- Project Structure
 
-```
-mnist-classifier/
-│
-├── train.csv              # MNIST training data (from Kaggle)
-├── mnist_classifier.py    # Main classifier script
-└── README.md
-```
-
----
 
 # Network Architecture
 
@@ -32,17 +22,14 @@ Input Layer        Hidden Layer       Output Layer
 
 ---
 
-## ⚙️ Setup & Usage
+##  Setup & Usage
 
 ### Requirements
 ```bash
 pip install numpy pandas matplotlib
 ```
 
-### Run
-```python
-python mnist_classifier.py
-```
+
 
 Make sure `train.csv` is available at the correct path (default: `/kaggle/input/digit-recognizer/train.csv`). Update this path if running locally.
 
